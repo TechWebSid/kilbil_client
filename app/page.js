@@ -1,12 +1,14 @@
-"use client";
-import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import constructMetadata from './components/Metadata';
 
+export const metadata = constructMetadata({
+  title: 'Kilbil The Learning Home - Nurturing Young Minds in Pune',
+  description: 'Welcome to Kilbil The Learning Home, a premier preschool in Pune offering innovative early childhood education. Experience our unique blend of play-based learning and academic excellence.',
+  path: '/',
+});
 
 export default function Home() {
- 
-  
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -56,7 +58,6 @@ export default function Home() {
                   <span>Start Learning Journey</span>
                   <span className="ml-2">🚀</span>
                 </button>
-               
               </div>
 
               {/* Quick Stats */}
@@ -288,7 +289,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Fun Facts & Quotes Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -435,8 +435,6 @@ export default function Home() {
       </section>
 
       <Footer />
-
-   
     </main>
   );
 }
