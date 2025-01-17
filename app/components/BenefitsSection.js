@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const BENEFITS = [
   {
@@ -55,7 +55,6 @@ const BENEFITS = [
 
 export default function BenefitsSection() {
   const [activeIndex, setActiveIndex] = useState(null);
-  const router = useRouter();
 
   return (
     <section className="py-20 bg-white">
@@ -105,12 +104,12 @@ export default function BenefitsSection() {
               <div className={`mt-6 text-center transition-opacity duration-300 ${
                 activeIndex === index ? 'opacity-100' : 'opacity-0'
               }`}>
-                <button 
-                  onClick={() => router.push(`/benefits/${benefit.slug}`)}
-                  className="bg-white px-4 py-2 rounded-full text-purple-600 font-semibold shadow-md hover:bg-purple-50 transition-colors"
+                <Link 
+                  href={`/benefits/${benefit.slug}`}
+                  className="bg-white px-4 py-2 rounded-full text-purple-600 font-semibold shadow-md hover:bg-purple-50 transition-colors inline-block"
                 >
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           ))}

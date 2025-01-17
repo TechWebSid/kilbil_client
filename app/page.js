@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import constructMetadata from './components/Metadata';
+import Link from 'next/link';
 
 export const metadata = constructMetadata({
   title: 'Kilbil The Learning Home - Nurturing Young Minds in Pune',
@@ -54,10 +55,13 @@ export default function Home() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-200 shadow-lg flex items-center justify-center">
+                <Link 
+                  href="/admissions"
+                  className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-200 shadow-lg flex items-center justify-center"
+                >
                   <span>Start Learning Journey</span>
                   <span className="ml-2">🚀</span>
-                </button>
+                </Link>
               </div>
 
               {/* Quick Stats */}
@@ -193,9 +197,12 @@ export default function Home() {
               <p className="text-lg text-gray-600">
                 At Kilbil, we believe every child is unique and deserves an education that sparks curiosity and fosters growth. Our innovative approach combines play-based learning with academic excellence.
               </p>
-              <button className="bg-purple-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-200">
+              <Link 
+                href="/about"
+                className="bg-purple-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-200 inline-block"
+              >
                 Learn More About Us
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -377,11 +384,12 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">Memory Game</h3>
               <p className="text-gray-600 text-center mb-4">Test your memory with our fun matching game!</p>
-              <a href="/games/memory">
-                <button className="w-full bg-yellow-400 text-white py-2 rounded-full hover:bg-yellow-500 transition-colors">
-                  Play Now
-                </button>
-              </a>
+              <Link 
+                href="/games/memory"
+                className="w-full bg-yellow-400 text-white py-2 rounded-full hover:bg-yellow-500 transition-colors inline-block text-center"
+              >
+                Play Now
+              </Link>
             </div>
 
             {/* Color Quiz */}
@@ -393,11 +401,12 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">Color Quiz</h3>
               <p className="text-gray-600 text-center mb-4">Learn colors through fun interactive quizzes!</p>
-              <a href="/games/colors">
-                <button className="w-full bg-pink-400 text-white py-2 rounded-full hover:bg-pink-500 transition-colors">
-                  Start Quiz
-                </button>
-              </a>
+              <Link 
+                href="/games/colors"
+                className="w-full bg-pink-400 text-white py-2 rounded-full hover:bg-pink-500 transition-colors inline-block text-center"
+              >
+                Start Quiz
+              </Link>
             </div>
 
             {/* Number Game */}
@@ -409,11 +418,12 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">Number Fun</h3>
               <p className="text-gray-600 text-center mb-4">Count and learn numbers with fun activities!</p>
-              <a href="/games/numbers">
-                <button className="w-full bg-purple-400 text-white py-2 rounded-full hover:bg-purple-500 transition-colors">
-                  Play Now
-                </button>
-              </a>
+              <Link 
+                href="/games/numbers"
+                className="w-full bg-purple-400 text-white py-2 rounded-full hover:bg-purple-500 transition-colors inline-block text-center"
+              >
+                Play Now
+              </Link>
             </div>
           </div>
         </div>
@@ -428,9 +438,12 @@ export default function Home() {
           <p className="text-xl text-white/90 mb-8">
             Enroll your child today and watch them thrive in our nurturing environment.
           </p>
-          <button className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
+          <Link 
+            href="/admissions"
+            className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg inline-block"
+          >
             Enroll Now
-          </button>
+          </Link>
         </div>
       </section>
 

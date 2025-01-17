@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 
 export default function Academics() {
   return (
@@ -212,9 +213,12 @@ export default function Academics() {
           <p className="text-xl text-white/90 mb-8">
             Join our academic programs and watch your child thrive!
           </p>
-          <button className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:scale-105 transform">
-            Explore Programs
-          </button>
+          <Link 
+            href="/admissions" 
+            className="inline-block bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:scale-105 transform"
+          >
+            Get Started
+          </Link>
         </div>
       </section>
 
