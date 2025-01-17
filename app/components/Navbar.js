@@ -20,11 +20,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="https://img.freepik.com/premium-vector/school-logo-design_706452-12.jpg" 
+              src="/kilbil.png" 
               alt="School Logo" 
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
-            <span className="ml-2 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+            <span className="ml-2 text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
               Kilbil The Learning Home
             </span>
           </div>

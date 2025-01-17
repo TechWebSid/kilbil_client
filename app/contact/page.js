@@ -1,5 +1,5 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Contact() {
   return (
@@ -18,11 +18,12 @@ export default function Contact() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                We'd love to hear from you! Reach out with any questions about our programs.
+                We'd love to hear from you! Reach out with any questions about
+                our programs.
               </p>
             </div>
             <div className="md:w-1/2">
-              <img 
+              <img
                 src="https://img.freepik.com/free-vector/organic-flat-customer-support-illustration_23-2148899173.jpg"
                 alt="Contact us"
                 className="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
@@ -43,31 +44,36 @@ export default function Contact() {
               <div className="space-y-6">
                 {[
                   {
-                    icon: '📍',
-                    title: 'Visit Us',
-                    info: '123 Learning Street, Education City, 12345',
-                    image: 'https://img.freepik.com/free-vector/city-map-concept-illustration_114360-1499.jpg'
+                    icon: "📍",
+                    title: "Visit Us",
+                    info: "Shop no.6/sr. No.2, Walhekar Properties, 1st floor, Nanded City, Pune",
+                    image:
+                      "https://img.freepik.com/free-vector/city-map-concept-illustration_114360-1499.jpg",
                   },
                   {
-                    icon: '📞',
-                    title: 'Call Us',
-                    info: '(555) 123-4567',
-                    image: 'https://img.freepik.com/free-vector/organic-flat-customer-support-illustration_23-2148899174.jpg'
+                    icon: "📞",
+                    title: "Call Us",
+                    info: "(555) 123-4567",
+                    image:
+                      "https://img.freepik.com/free-vector/organic-flat-customer-support-illustration_23-2148899174.jpg",
                   },
                   {
-                    icon: '✉️',
-                    title: 'Email Us',
-                    info: 'hello@kidsacademy.com',
-                    image: 'https://img.freepik.com/free-vector/email-campaign-concept-illustration_114360-1633.jpg'
-                  }
+                    icon: "✉️",
+                    title: "Email Us",
+                    info: "info@kilbil.in",
+                    image:
+                      "https://img.freepik.com/free-vector/email-campaign-concept-illustration_114360-1633.jpg",
+                  },
                 ].map((contact) => (
-                  <div 
+                  <div
                     key={contact.title}
                     className="flex items-center space-x-4 bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow"
                   >
                     <span className="text-3xl">{contact.icon}</span>
                     <div>
-                      <h3 className="font-bold text-gray-800">{contact.title}</h3>
+                      <h3 className="font-bold text-gray-800">
+                        {contact.title}
+                      </h3>
                       <p className="text-gray-600">{contact.info}</p>
                     </div>
                   </div>
@@ -76,19 +82,23 @@ export default function Contact() {
             </div>
 
             <div className="bg-purple-50 p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message 💌</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                Send us a Message 💌
+              </h3>
               <form className="space-y-6">
                 <div>
                   <label className="block text-gray-700 mb-2">Your Name</label>
-                  <input 
+                  <input
                     type="text"
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 mb-2">Email Address</label>
-                  <input 
+                  <label className="block text-gray-700 mb-2">
+                    Email Address
+                  </label>
+                  <input
                     type="email"
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     placeholder="john@example.com"
@@ -96,7 +106,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <label className="block text-gray-700 mb-2">Message</label>
-                  <textarea 
+                  <textarea
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent h-32"
                     placeholder="Your message here..."
                   ></textarea>
@@ -111,7 +121,7 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gradient-to-b from-purple-50 to-green-50">
+      {/* <section className="py-20 bg-gradient-to-b from-purple-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
             Find Us Here 🗺️
@@ -124,7 +134,7 @@ export default function Contact() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Social Connect Section */}
       <section className="py-20 bg-white">
@@ -135,35 +145,40 @@ export default function Contact() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               {
-                platform: 'Facebook',
-                icon: '👍',
-                color: 'bg-blue-50',
-                hover: 'hover:bg-blue-100'
+                platform: "Facebook",
+                icon: "👍",
+                color: "bg-blue-50",
+                hover: "hover:bg-blue-100",
+                link: "https://www.facebook.com/kilbilthelearninghome",
               },
               {
-                platform: 'Instagram',
-                icon: '📸',
-                color: 'bg-pink-50',
-                hover: 'hover:bg-pink-100'
+                platform: "Instagram",
+                icon: "📸",
+                color: "bg-pink-50",
+                hover: "hover:bg-pink-100",
+                link: "https://www.instagram.com/kilbilthelearninghome",
               },
               {
-                platform: 'Twitter',
-                icon: '🐦',
-                color: 'bg-blue-50',
-                hover: 'hover:bg-blue-100'
+                platform: "Twitter",
+                icon: "🐦",
+                color: "bg-blue-50",
+                hover: "hover:bg-blue-100",
+                link: "https://www.twitter.com/kilbilthelearninghome",
               },
               {
-                platform: 'YouTube',
-                icon: '🎥',
-                color: 'bg-red-50',
-                hover: 'hover:bg-red-100'
-              }
+                platform: "YouTube",
+                icon: "🎥",
+                color: "bg-red-50",
+                hover: "hover:bg-red-100",
+                link: "https://www.youtube.com/kilbilthelearninghome",
+              },
             ].map((social) => (
-              <div 
+              <div
                 key={social.platform}
                 className={`${social.color} ${social.hover} p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer`}
               >
                 <span className="text-4xl mb-4 block">{social.icon}</span>
+
                 <h3 className="font-bold text-gray-800">{social.platform}</h3>
               </div>
             ))}
@@ -174,4 +189,4 @@ export default function Contact() {
       <Footer />
     </main>
   );
-} 
+}

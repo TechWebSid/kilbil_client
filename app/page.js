@@ -86,7 +86,7 @@ export default function Home() {
               {/* Main Mascot Image */}
               <div className="relative z-10">
                 <img 
-                  src="https://thumbs.dreamstime.com/b/back-to-school-concept-cute-cartoon-kids-standing-classroom-sticker-stick-ai-generated-335073136.jpg"
+                  src="https://i.pinimg.com/736x/09/80/a3/0980a36d9d6ecfb005450e5f9af4764b.jpg"
                   alt="Kids Academy Mascot"
                   className="w-full h-auto rounded-2xl animate-float"
                 />
