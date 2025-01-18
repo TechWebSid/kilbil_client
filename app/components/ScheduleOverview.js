@@ -68,51 +68,53 @@ export default function ScheduleOverview() {
           </p>
         </div>
 
-        {/* Day Selection */}
-        <div className="flex justify-center gap-2 mb-12 overflow-x-auto pb-4">
-          {Object.keys(schedule).map((day) => (
-            <button
-              key={day}
-              onClick={() => setActiveDay(day)}
-              className={`px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-300 min-w-[120px] ${
-                activeDay === day
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-600 hover:bg-blue-50'
-              }`}
-            >
-              {day.charAt(0).toUpperCase() + day.slice(1)}
-            </button>
-          ))}
+        {/* Day Selection - Mobile Optimized */}
+        <div className="flex justify-start md:justify-center gap-2 mb-12 overflow-x-auto pb-4 px-4 -mx-4 md:mx-0 scrollbar-hide">
+          <div className="flex space-x-2 md:flex-wrap md:justify-center min-w-full md:min-w-0 px-2">
+            {Object.keys(schedule).map((day) => (
+              <button
+                key={day}
+                onClick={() => setActiveDay(day)}
+                className={`whitespace-nowrap px-4 py-2 md:px-6 md:py-3 rounded-xl text-base md:text-lg font-semibold transition-all duration-300 flex-shrink-0 ${
+                  activeDay === day
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg scale-105'
+                    : 'bg-white text-gray-600 hover:bg-blue-50'
+                }`}
+              >
+                {day.charAt(0).toUpperCase() + day.slice(1)}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Schedule Timeline */}
+        {/* Schedule Timeline - Mobile Optimized */}
         <div className="max-w-4xl mx-auto">
           {schedule[activeDay].map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 mb-6 group"
+              className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6 group"
             >
               {/* Time */}
-              <div className="w-24 text-right">
-                <span className="text-sm font-semibold text-gray-600">
+              <div className="w-20 md:w-24 text-right">
+                <span className="text-xs md:text-sm font-semibold text-gray-600">
                   {item.time}
                 </span>
               </div>
 
               {/* Timeline Dot */}
               <div className="relative">
-                <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 group-hover:scale-150 transition-transform duration-300"></div>
+                <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 group-hover:scale-150 transition-transform duration-300"></div>
                 {index !== schedule[activeDay].length - 1 && (
-                  <div className="absolute top-4 left-2 w-0.5 h-10 bg-gradient-to-b from-blue-200 to-purple-200"></div>
+                  <div className="absolute top-3 md:top-4 left-1.5 md:left-2 w-0.5 h-8 md:h-10 bg-gradient-to-b from-blue-200 to-purple-200"></div>
                 )}
               </div>
 
               {/* Activity Card */}
               <div className="flex-1">
-                <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-x-2">
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">{item.icon}</span>
-                    <span className="font-semibold text-gray-800">
+                <div className="bg-white rounded-xl p-3 md:p-4 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-x-2">
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <span className="text-xl md:text-2xl">{item.icon}</span>
+                    <span className="font-semibold text-gray-800 text-sm md:text-base">
                       {item.activity}
                     </span>
                   </div>
@@ -122,6 +124,17 @@ export default function ScheduleOverview() {
           ))}
         </div>
       </div>
+
+      {/* Custom scrollbar styles */}
+      <style jsx global>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 } 
