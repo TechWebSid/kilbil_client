@@ -35,3 +35,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+::selection {
+  background-color: #800080; /* Custom background color (e.g., Tomato) */
+  color: #ffffff; /* Custom text color (e.g., White) */
+}
