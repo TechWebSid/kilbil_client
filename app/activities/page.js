@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BenefitsSection from '../components/BenefitsSection';
+import Link from 'next/link';
 
 export default function Activities() {
   return (
@@ -189,18 +190,20 @@ export default function Activities() {
 
       {/* Join Activities CTA */}
       <section className="py-20 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Join the Fun? 🎉
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Discover exciting activities and make new friends!
-          </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl font-bold text-white mb-6">
+          Ready to Join the Fun? 🎉
+        </h2>
+        <p className="text-xl text-white/90 mb-8">
+          Discover exciting activities and make new friends!
+        </p>
+        <Link href="/contact" passHref>
           <button className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:scale-105 transform">
             Join Our Activities
           </button>
-        </div>
-      </section>
+        </Link>
+      </div>
+    </section>
 
       <Footer />
     </main>
