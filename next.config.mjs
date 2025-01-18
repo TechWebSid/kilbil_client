@@ -1,4 +1,26 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.freepik.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'freepik.com',
+      }
+    ],
+    minimumCacheTTL: 60,
+  },
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  }
+};
 
 export default nextConfig;
