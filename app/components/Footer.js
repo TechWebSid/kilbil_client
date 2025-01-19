@@ -1,5 +1,5 @@
 'use client';
-import { FaFacebook, FaTwitter, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope, FaCode } from 'react-icons/fa';
 
 const Footer = () => {
   const socialLinks = [
@@ -91,8 +91,33 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-purple-200 text-center text-gray-600">
-          <p>© {new Date().getFullYear()} Kilbil The Learning Home. All rights reserved.</p>
+        {/* Developer Credits */}
+        <div className="mt-12 pt-8 border-t border-purple-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+            <div className="text-center md:text-left text-gray-600">
+              <p>© {new Date().getFullYear()} Kilbil The Learning Home. All rights reserved.</p>
+            </div>
+            <div className="text-center md:text-right">
+              <div className="inline-flex flex-col items-center md:items-end space-y-2">
+                <div className="flex items-center gap-2 text-purple-600">
+                  <FaCode className="h-4 w-4" />
+                  <p className="font-['Playfair_Display'] text-sm">
+                    Designed & Developed by{' '}
+                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text font-semibold">
+                      SNT Rudra Tech LLP
+                    </span>
+                  </p>
+                </div>
+                <a 
+                  href="tel:+916387945717" 
+                  className="text-gray-600 hover:text-purple-600 transition-colors duration-200 text-sm flex items-center gap-1"
+                >
+                  <FaPhone className="h-3 w-3" />
+                  <span>+91 6387945717</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

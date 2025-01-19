@@ -197,6 +197,180 @@ export default function Academics() {
         </div>
       </section>
 
+      {/* Thematic Learning Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-gray-800 mb-6">
+            Thematic Learning 🌈
+          </h2>
+          <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16">
+            We make learning engaging by connecting lessons to real-world themes that children love and understand.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                theme: 'Seasons & Weather',
+                description: 'Learning about nature cycles through art, science, and stories',
+                image: 'https://img.freepik.com/free-vector/cute-children-seasonal-activities-cartoon-set_74855-7727.jpg',
+                activities: ['Weather Chart Making', 'Seasonal Crafts', 'Nature Walks'],
+                color: 'from-blue-500 to-green-500'
+              },
+              {
+                theme: 'Festivals & Culture',
+                description: 'Celebrating diversity through traditional activities and customs',
+                image: 'https://img.freepik.com/free-vector/happy-diverse-children-celebrating-together_74855-5272.jpg',
+                activities: ['Cultural Dances', 'Festival Foods', 'Traditional Games'],
+                color: 'from-yellow-500 to-red-500'
+              },
+              {
+                theme: 'Animals & Nature',
+                description: 'Discovering wildlife and developing environmental awareness',
+                image: 'https://img.freepik.com/free-vector/children-learning-about-animals_74855-5280.jpg',
+                activities: ['Animal Crafts', 'Nature Projects', 'Zoo Themes'],
+                color: 'from-green-500 to-teal-500'
+              },
+              {
+                theme: 'Community Helpers',
+                description: 'Learning about different professions and their importance',
+                image: 'https://img.freepik.com/free-vector/children-learning-about-professions_74855-5278.jpg',
+                activities: ['Role Play', 'Field Trips', 'Helper Visits'],
+                color: 'from-purple-500 to-pink-500'
+              }
+            ].map((theme) => (
+              <div 
+                key={theme.theme}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={theme.image}
+                    alt={theme.theme}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className={`absolute inset-0 opacity-20 bg-gradient-to-r ${theme.color}`}></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{theme.theme}</h3>
+                  <p className="text-gray-600 mb-4 text-sm">{theme.description}</p>
+                  <div className="space-y-2">
+                    {theme.activities.map((activity) => (
+                      <div key={activity} className="flex items-center gap-2">
+                        <span className="text-purple-500">•</span>
+                        <span className="text-gray-600 text-sm">{activity}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Life Skills Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-gray-800 mb-6">
+            Life Skills Development 🌱
+          </h2>
+          <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16">
+            Building essential life skills through daily activities and guided practice.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                category: 'Personal Care',
+                icon: '🧼',
+                skills: [
+                  { name: 'Hygiene Habits', description: 'Hand washing, dental care, and cleanliness' },
+                  { name: 'Dressing Skills', description: 'Buttoning, zipping, and shoe tying' },
+                  { name: 'Grooming', description: 'Basic self-care and appearance maintenance' }
+                ],
+                color: 'bg-blue-50'
+              },
+              {
+                category: 'Social Skills',
+                icon: '🤝',
+                skills: [
+                  { name: 'Manners & Etiquette', description: 'Please, thank you, and social graces' },
+                  { name: 'Sharing & Taking Turns', description: 'Cooperative play and patience' },
+                  { name: 'Conflict Resolution', description: 'Problem-solving with peers' }
+                ],
+                color: 'bg-green-50'
+              },
+              {
+                category: 'Organization',
+                icon: '📚',
+                skills: [
+                  { name: 'Toy Management', description: 'Sorting and cleaning up play areas' },
+                  { name: 'Personal Space', description: 'Maintaining desk and cubby organization' },
+                  { name: 'Time Management', description: 'Following daily routines and schedules' }
+                ],
+                color: 'bg-yellow-50'
+              }
+            ].map((category) => (
+              <div 
+                key={category.category}
+                className={`${category.color} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2`}
+              >
+                <div className="text-4xl mb-6">{category.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">{category.category}</h3>
+                <div className="space-y-6">
+                  {category.skills.map((skill) => (
+                    <div key={skill.name} className="group">
+                      <h4 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors duration-200">
+                        {skill.name}
+                      </h4>
+                      <p className="text-gray-600 text-sm">{skill.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Progress Tracking */}
+          <div className="mt-16 bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-8 shadow-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-gray-800">Progress Tracking 📈</h3>
+                <p className="text-gray-600">
+                  We regularly monitor and celebrate your child's development in life skills through:
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    'Monthly progress reports',
+                    'Skill achievement certificates',
+                    'Parent-teacher meetings',
+                    'Development portfolios'
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-2">
+                      <span className="text-purple-500">✓</span>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { stat: '90%', label: 'Skills Mastery' },
+                  { stat: '95%', label: 'Parent Satisfaction' },
+                  { stat: '100%', label: 'Individual Attention' },
+                  { stat: '85%', label: 'Peer Interaction' }
+                ].map((item) => (
+                  <div key={item.label} className="bg-white p-4 rounded-xl text-center">
+                    <div className="text-2xl font-bold text-purple-600">{item.stat}</div>
+                    <div className="text-sm text-gray-600">{item.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section - Added playful background illustration */}
       <section className="py-20 bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

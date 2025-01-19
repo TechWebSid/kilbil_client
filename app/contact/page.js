@@ -90,7 +90,7 @@ export default function Contact() {
                   <label className="block text-gray-700 mb-2">Your Name</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black"
                     placeholder="John Doe"
                   />
                 </div>
@@ -100,14 +100,14 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black"
                     placeholder="john@example.com"
                   />
                 </div>
                 <div>
                   <label className="block text-gray-700 mb-2">Message</label>
                   <textarea
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent h-32"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent h-32 text-black"
                     placeholder="Your message here..."
                   ></textarea>
                 </div>
