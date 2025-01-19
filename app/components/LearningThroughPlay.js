@@ -21,7 +21,7 @@ export default function LearningThroughPlay() {
         skills: ['Creativity', 'Fine Motor Skills', 'Self Expression']
       },
       {
-        title: 'Reading Nook',
+        title: 'Reading Book',
         description: 'Cozy corner for storytelling and early literacy development.',
         image: 'https://img.freepik.com/free-vector/children-reading-concept-illustration_114360-8559.jpg',
         skills: ['Literacy', 'Imagination', 'Language']

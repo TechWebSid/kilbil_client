@@ -5,6 +5,7 @@ import OurStory from '../components/OurStory';
 import OurValues from '../components/OurValues';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
+import OurFounders from '../components/OurFounders';
 
 export default function About() {
   return (
@@ -13,6 +14,7 @@ export default function About() {
       <AboutHero />
       <OurStory />
       <WhyChooseUs />
+      <OurFounders />
       <OurValues />
       <Testimonials />
       <Footer />
