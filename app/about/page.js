@@ -12,9 +12,10 @@ export default function About() {
     <main className="min-h-screen">
       <Navbar />
       <AboutHero />
+      <OurFounders />
       <OurStory />
       <WhyChooseUs />
-      <OurFounders />
+     
       <OurValues />
       <Testimonials />
       <Footer />

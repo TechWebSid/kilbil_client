@@ -20,7 +20,29 @@ const nextConfig = {
   swcMinify: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/favicon.ico',
+        destination: '/kilbil.png',
+        permanent: true,
+      },
+    ];
+  },
+  headers() {
+    return [
+      {
+        source: '/kilbil.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
