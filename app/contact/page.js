@@ -81,40 +81,48 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-purple-50 p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                Send us a Message 💌
-              </h3>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-gray-700 mb-2">Your Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black"
-                    placeholder="John Doe"
-                  />
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-gray-800">
+                  Visit Our Campus 🏫
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We welcome parents to visit our campus and experience our vibrant learning environment firsthand.
+                </p>
+              </div>
+
+              <div className="space-y-4 border-t border-purple-200 pt-6">
+                <h4 className="font-bold text-gray-800">Visiting Hours</h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <p className="font-semibold text-purple-600">Weekdays</p>
+                    <p className="text-gray-600">9:00 AM - 4:00 PM</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <p className="font-semibold text-pink-500">Saturdays</p>
+                    <p className="text-gray-600">9:00 AM - 1:00 PM</p>
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black"
-                    placeholder="john@example.com"
-                  />
+              </div>
+
+              <div className="space-y-4 border-t border-purple-200 pt-6">
+                <h4 className="font-bold text-gray-800">Admission Inquiries</h4>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <p className="text-gray-600 mb-2">
+                    For admission related queries, please visit us during office hours or reach out through:
+                  </p>
+                  <div className="flex items-center space-x-2 text-purple-600">
+                    <span className="text-xl">📱</span>
+                    <p className="font-semibold">+91 98765 43210</p>
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">Message</label>
-                  <textarea
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent h-32 text-black"
-                    placeholder="Your message here..."
-                  ></textarea>
-                </div>
-                <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
-                  Send Message
-                </button>
-              </form>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <p className="text-sm text-gray-500 italic">
+                  Note: Prior appointment is recommended for campus visits and admission inquiries to ensure we can give you our full attention.
+                </p>
+              </div>
             </div>
           </div>
         </div>
