@@ -25,7 +25,7 @@ const nextConfig = {
     return [
       {
         source: '/favicon.ico',
-        destination: '/kilbil.png',
+        destination: '/kilbil_logo.png',
         permanent: true,
       },
     ];
@@ -33,7 +33,7 @@ const nextConfig = {
   headers() {
     return [
       {
-        source: '/kilbil.png',
+        source: '/kilbil_logo.png',
         headers: [
           {
             key: 'Cache-Control',

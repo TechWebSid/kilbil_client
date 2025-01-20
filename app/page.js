@@ -4,8 +4,6 @@ import constructMetadata from './components/Metadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-  title: 'Kilbil The Learning Home - Nurturing Young Minds in Pune',
-  description: 'Welcome to Kilbil The Learning Home, a premier preschool in Pune offering innovative early childhood education. Experience our unique blend of play-based learning and academic excellence.',
   path: '/',
 });
 

@@ -1,45 +1,72 @@
-export const siteMetadata = {
-  title: 'Kilbil The Learning Home - Best Kindergarten in Pune',
-  description: 'Kilbil The Learning Home is a premier preschool in Pune offering innovative early childhood education programs. Our child-centered approach combines play-based learning with academic excellence.',
+// SEO Metadata Configuration
+export const siteConfig = {
+  name: "Kilbil The Learning Home",
+  description: "Pune's Premier Preschool & Kindergarten | Nurturing Young Minds Since 2010",
+  url: "https://kilbil.in", // Replace with your actual domain
+  ogImage: "/kilbil_logo.png",
+  links: {
+    facebook: "https://www.facebook.com/kilbilschool",
+    instagram: "https://www.instagram.com/kilbilschool",
+    twitter: "https://twitter.com/kilbilschool"
+  }
+};
+
+export const defaultMetadata = {
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Kilbil The Learning Home - Best Kindergarten in Pune | Preschool & Daycare",
+    template: "%s | Kilbil The Learning Home"
+  },
+  description: "Kilbil The Learning Home, Pune's premier preschool, offers innovative early education blending play-based learning with academic excellence. We nurture creativity, confidence, and curiosity in a safe, joyful environment, preparing children for a bright future.",
   keywords: [
-    'kindergarten in pune',
-    'early childhood education',
-    'play based learning',
-    'best kindergarten pune',
-    'kilbil school',
-    'montessori education pune',
-    'child care center nanded city',
-    'nursery admission pune',
-    'kids activities pune',
-    'preschool admission',
-    'best preschool in pune',
-    'best preschool in nanded city',
-    'best preschool in nanded',
-    'best preschool in nanded pune',
-    'best preschool in nanded city pune',
-    'kindergarten in pune',
+    "preschool in Pune",
+    "best kindergarten Pune",
+    "daycare Nanded City",
+    "early childhood education",
+    "play-based learning",
+    "Kilbil school",
+    "kindergarten admission Pune",
+    "top preschool Pune",
+    "child care center",
+    "montessori school Pune",
+    "best playschool Nanded City",
+    "early learning center",
+    "preschool education",
+    "kids activities Pune",
+    "nursery school Pune"
   ],
+  authors: [
+    { name: "Kilbil The Learning Home" }
+  ],
+  creator: "Kilbil The Learning Home",
+  publisher: "Kilbil The Learning Home",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
   openGraph: {
-    type: 'website',
-    locale: 'en_IE',
-    url: 'https://www.kilbil.in/',
-    siteName: 'Kilbil The Learning Home',
+    type: "website",
+    locale: "en_IN",
+    url: siteConfig.url,
+    title: "Kilbil The Learning Home - Nurturing Young Minds with Excellence",
+    description: "Join Pune's leading preschool offering innovative early education. Expert teachers, modern facilities, and play-based learning for ages 2-6 years.",
+    siteName: siteConfig.name,
     images: [
       {
-        url: 'https://www.kilbil.in/images/og-image.jpg',
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Kilbil The Learning Home - Nurturing Young Minds',
-      },
-    ],
+        alt: "Kilbil The Learning Home - Nurturing Young Minds"
+      }
+    ]
   },
   twitter: {
-    handle: '@kilbilschool',
-    site: '@kilbilschool',
-    cardType: 'summary_large_image',
-  },
-  alternates: {
-    canonical: 'https://www.kilbil.in',
+    card: "summary_large_image",
+    title: "Kilbil The Learning Home - Best Preschool in Pune",
+    description: "Discover excellence in early education at Kilbil. Innovative learning, caring environment, and holistic development for your child.",
+    images: [siteConfig.ogImage],
+    creator: "@kilbilschool"
   },
   robots: {
     index: true,
@@ -52,8 +79,13 @@ export const siteMetadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: siteConfig.url,
+  },
   verification: {
-    google: 'your-google-verification-code',
-    bing: 'your-bing-verification-code',
-  }
+    // Add your verification codes here
+    google: "your-google-verification-code",
+   
+  },
+  category: "education"
 }; 

@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { defaultMetadata } from './lib/metadata';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,17 +12,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Kilbil The Learning Home - Best Kindergarten in Pune",
-  description: "Kilbil The Learning Home, Pune's premier preschool, offers innovative early education blending play-based learning with academic excellence. We nurture creativity, confidence, and curiosity in a safe, joyful environment, preparing children for a bright future.",
-  icons: {
-    icon: '/kilbil.png'
-  }
-};
+export const metadata = defaultMetadata;
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/kilbil_logo.png" />
+        <link rel="apple-touch-icon" href="/kilbil_logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

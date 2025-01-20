@@ -1,23 +1,31 @@
-import { siteMetadata } from '../lib/metadata';
+import { defaultMetadata, siteConfig } from '../lib/metadata';
 
 export default function constructMetadata({
-  title = siteMetadata.title,
-  description = siteMetadata.description,
-  keywords = siteMetadata.keywords,
-  image = siteMetadata.openGraph.images[0],
+  title = defaultMetadata.title.default,
+  description = defaultMetadata.description,
+  keywords = defaultMetadata.keywords,
+  image = defaultMetadata.openGraph.images[0],
   path = '',
 }) {
+  const url = `${siteConfig.url}${path}`;
+
   return {
-    metadataBase: new URL('https://www.kilbil.in'),
-    title: title,
-    description: description,
-    keywords: keywords,
-    authors: [{ name: 'Kilbil The Learning Home' }],
+    metadataBase: new URL(siteConfig.url),
+    title: {
+      default: title,
+      template: defaultMetadata.title.template,
+    },
+    description,
+    keywords,
+    authors: defaultMetadata.authors,
+    creator: defaultMetadata.creator,
+    publisher: defaultMetadata.publisher,
+    formatDetection: defaultMetadata.formatDetection,
     openGraph: {
-      title: title,
-      description: description,
-      url: `https://www.kilbil.in${path}`,
-      siteName: siteMetadata.openGraph.siteName,
+      title,
+      description,
+      url,
+      siteName: siteConfig.name,
       images: [
         {
           url: image.url,
@@ -26,30 +34,21 @@ export default function constructMetadata({
           alt: image.alt,
         },
       ],
-      locale: 'en_IE',
+      locale: 'en_IN',
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: title,
-      description: description,
+      title,
+      description,
       images: [image.url],
-      creator: siteMetadata.twitter.handle,
+      creator: siteConfig.links.twitter,
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
+    robots: defaultMetadata.robots,
     alternates: {
-      canonical: `https://www.kilbil.in${path}`,
+      canonical: url,
     },
-    verification: siteMetadata.verification,
+    verification: defaultMetadata.verification,
+    category: defaultMetadata.category,
   };
 } 

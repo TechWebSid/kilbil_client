@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -19,10 +20,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/kilbil.png" 
+            <Image 
+              src="/kilbil_logo.png"
               alt="School Logo" 
+              width={100}
+              height={100}
               className="h-20 w-auto"
+              priority
             />
             <span className="ml-2 text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
               Kilbil The Learning Home
