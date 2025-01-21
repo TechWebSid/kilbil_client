@@ -45,21 +45,21 @@ export default function Academics() {
                 title: 'Early Learning',
                 age: '3-4 Years',
                 description: 'Foundation skills through play-based learning',
-                image: 'https://img.freepik.com/free-vector/cute-kids-playing-kindergarten-illustration_23-2148548346.jpg',
+                image: 'https://www.oakridge.in/wp-content/uploads/2024/02/Bengaluru-Early-Years.png',
                 color: 'bg-orange-50'
               },
               {
                 title: 'Pre-School',
                 age: '4-5 Years',
                 description: 'Structured learning with creative activities',
-                image: 'https://img.freepik.com/free-vector/cartoon-kids-learning-classroom_23-2148541935.jpg',
+                image: 'https://img.freepik.com/free-vector/group-young-children-cartoon-character-white-background_1308-51579.jpg',
                 color: 'bg-yellow-50'
               },
               {
                 title: 'Kindergarten',
                 age: '5-6 Years',
                 description: 'Advanced concepts with interactive methods',
-                image: 'https://img.freepik.com/free-vector/happy-diverse-students-children-sitting-desk-classroom_74855-5675.jpg',
+                image: 'https://img.freepik.com/free-vector/students-with-kindergarten-room-elements-white_1308-55756.jpg?semt=ais_incoming',
                 color: 'bg-pink-50'
               }
             ].map((program) => (

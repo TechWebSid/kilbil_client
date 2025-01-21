@@ -53,7 +53,7 @@ export default function Contact() {
                   {
                     icon: "📞",
                     title: "Call Us",
-                    info: "(555) 123-4567",
+                    info: "+91 8177867267",
                     image:
                       "https://img.freepik.com/free-vector/organic-flat-customer-support-illustration_23-2148899174.jpg",
                   },
@@ -113,7 +113,7 @@ export default function Contact() {
                   </p>
                   <div className="flex items-center space-x-2 text-purple-600">
                     <span className="text-xl">📱</span>
-                    <p className="font-semibold">+91 98765 43210</p>
+                    <p className="font-semibold">+91 8177867267</p>
                   </div>
                 </div>
               </div>

@@ -41,7 +41,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <FaPhone className="h-5 w-5 text-purple-500" />
-                <p>(555) 123-4567</p>
+                <p>+91 8177867267</p>
               </div>
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="h-5 w-5 text-purple-500" />
@@ -114,6 +114,7 @@ const Footer = () => {
                 >
                   <FaPhone className="h-3 w-3" />
                   <span>+91 6387945717</span>
+                
                 </a>
               </div>
             </div>

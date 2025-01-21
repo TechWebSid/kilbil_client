@@ -1,7 +1,7 @@
 export default function OurFounders() {
   const founders = [
     {
-      name: "Kavita Chandrashekhar Kasar",
+      name: "Mrs. Kavita Chandrashekhar Kasar",
       education: "B.Com, Teacher Training Course",
       experience: [
         "7 years experience in popular organization as a teacher",
@@ -17,7 +17,7 @@ export default function OurFounders() {
       }
     },
     {
-      name: "Vaishali Vishwas Walhekar",
+      name: "Mrs. Vaishali Vishwas Walhekar",
       education: "B.A, Teacher Training Course",
       experience: [
         "7 years experience in popular organization as a teacher",
@@ -33,7 +33,7 @@ export default function OurFounders() {
       }
     },
     {
-      name: "Ashwini Sunil Kurpe",
+      name: "Mrs. Ashwini Sunil Kurpe",
       education: "B.A.B.Ed",
       experience: [
         "11 years experience in popular organization as a teacher and coordinator",
