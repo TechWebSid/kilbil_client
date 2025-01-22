@@ -16,16 +16,16 @@ const BENEFITS = [
     slug: 'art-and-craft'
   },
   {
-    title: 'Outdoor Play',
+    title: 'Active Play',
     benefits: [
-      'Builds physical fitness and strength',
-      'Develops teamwork and social skills',
-      'Improves balance and coordination',
-      'Promotes healthy lifestyle habits'
+      'Develops motor skills and coordination',
+      'Encourages physical activity',
+      'Promotes social interaction',
+      'Builds confidence through movement'
     ],
-    icon: '⚽',
+    icon: '🎯',
     color: 'from-green-100 to-green-50',
-    slug: 'outdoor-play'
+    slug: 'active-play'
   },
   {
     title: 'Music & Dance',

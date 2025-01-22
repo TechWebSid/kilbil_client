@@ -21,30 +21,42 @@ export default function LearningThroughPlay() {
         skills: ['Creativity', 'Fine Motor Skills', 'Self Expression']
       },
       {
-        title: 'Reading Book',
+        title: 'Active Play Area',
+        description: 'Develop physical strength and coordination through fun indoor activities.',
+        image: 'https://img.freepik.com/free-vector/children-playing-different-games-kindergarten_74855-7370.jpg',
+        skills: ['Physical Fitness', 'Social Skills', 'Coordination']
+      },
+      {
+        title: 'Reading Corner',
         description: 'Cozy corner for storytelling and early literacy development.',
         image: 'https://img.freepik.com/free-vector/children-reading-concept-illustration_114360-8559.jpg',
         skills: ['Literacy', 'Imagination', 'Language']
       }
     ],
-    outdoor: [
+    creative: [
       {
-        title: 'Nature Explorer Zone',
-        description: 'Discover the wonders of nature through guided exploration and hands-on activities.',
-        image: 'https://img.freepik.com/free-vector/children-exploring-nature-park_74855-5299.jpg',
-        skills: ['Nature Knowledge', 'Observation', 'Adventure']
+        title: 'Music & Movement',
+        description: 'Express through rhythm, dance, and musical instruments.',
+        image: 'https://img.freepik.com/free-vector/children-playing-music-class_74855-5247.jpg',
+        skills: ['Rhythm', 'Coordination', 'Expression']
       },
       {
-        title: 'Active Play Area',
-        description: 'Develop physical strength and coordination through fun outdoor activities.',
-        image: 'https://img.freepik.com/free-vector/children-playing-playground_1308-28363.jpg',
-        skills: ['Physical Fitness', 'Social Skills', 'Coordination']
+        title: 'Dramatic Play',
+        description: 'Develop social skills and creativity through role-playing activities.',
+        image: 'https://img.freepik.com/free-vector/children-doing-theater-performance_74855-5289.jpg',
+        skills: ['Social Skills', 'Imagination', 'Communication']
       },
       {
-        title: 'Garden & Growing',
-        description: 'Learn about plants, growth, and responsibility through gardening activities.',
-        image: 'https://img.freepik.com/free-vector/children-planting-trees_74855-5279.jpg',
-        skills: ['Nature Care', 'Responsibility', 'Science']
+        title: 'Sensory Play',
+        description: 'Explore different textures and materials to develop sensory awareness.',
+        image: 'https://img.freepik.com/free-vector/children-playing-with-different-toys_74855-5280.jpg',
+        skills: ['Sensory Development', 'Fine Motor Skills', 'Discovery']
+      },
+      {
+        title: 'Learning Games',
+        description: 'Educational games that make learning fun and interactive.',
+        image: 'https://img.freepik.com/free-vector/children-playing-educational-game_74855-5287.jpg',
+        skills: ['Problem Solving', 'Memory', 'Cognitive Skills']
       }
     ]
   };
@@ -63,7 +75,7 @@ export default function LearningThroughPlay() {
 
         {/* Activity Type Tabs */}
         <div className="flex justify-center gap-4 mb-12">
-          {['indoor', 'outdoor'].map((type) => (
+          {['indoor', 'creative'].map((type) => (
             <button
               key={type}
               onClick={() => setActiveTab(type)}
@@ -73,13 +85,13 @@ export default function LearningThroughPlay() {
                   : 'bg-white text-gray-600 hover:bg-yellow-50'
               }`}
             >
-              {type.charAt(0).toUpperCase() + type.slice(1)} Activities
+              {type === 'indoor' ? 'Indoor Activities' : 'Creative Activities'}
             </button>
           ))}
         </div>
 
         {/* Activity Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {activities[activeTab].map((activity, index) => (
             <div
               key={activity.title}
