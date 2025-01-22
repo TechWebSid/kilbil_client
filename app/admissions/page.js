@@ -104,7 +104,7 @@ export default function Admissions() {
               </h2>
               <div className="space-y-4">
                 {[
-                  'Age: 3-6 years old',
+                  'Age: 2+ years old',
                   'Birth Certificate',
                   'Medical Records',
                   'Previous School Records (if any)',
@@ -127,33 +127,64 @@ export default function Admissions() {
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
             Fee Structure 💰
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                plan: 'Pre-Nursery',
-                age: '3-4 years',
-                price: '$500/month',
-                features: ['Basic Learning', 'Play Activities', 'Snack Time', 'Nap Time'],
-                image: 'https://img.freepik.com/free-vector/cute-baby-playing-with-toys_74855-5646.jpg'
+                plan: 'Playgroup',
+                age: '2-3 years',
+                price: '₹20,000',
+                period: 'Per Annum',
+                features: [
+                  'Basic Learning Activities',
+                  'Play-based Development',
+                  'Social Interaction',
+                  'Creative Expression'
+                ],
+                image: 'https://img.freepik.com/free-vector/cute-little-kids-playing-with-different-toys_74855-14508.jpg'
               },
               {
                 plan: 'Nursery',
-                age: '4-5 years',
-                price: '$600/month',
-                features: ['Advanced Learning', 'Art & Craft', 'Music Classes', 'Outdoor Activities'],
-                image: 'https://img.freepik.com/free-vector/children-learning-classroom-illustration_74855-5675.jpg'
+                age: '3-4 years',
+                price: '₹23,000',
+                period: 'Per Annum',
+                features: [
+                  'Structured Learning',
+                  'Language Development',
+                  'Motor Skills Activities',
+                  'Interactive Play'
+                ],
+                image: 'https://img.freepik.com/free-vector/kindergarten-kids-learning-numbers-with-teacher_74855-6462.jpg'
               },
               {
-                plan: 'Kindergarten',
+                plan: 'Jr. KG',
+                age: '4-5 years',
+                price: '₹25,000',
+                period: 'Per Annum',
+                features: [
+                  'Advanced Learning',
+                  'Pre-writing Skills',
+                  'Number Concepts',
+                  'Art & Music'
+                ],
+                image: 'https://img.freepik.com/free-vector/children-learning-write-kindergarten_74855-5836.jpg'
+              },
+              {
+                plan: 'Sr. KG',
                 age: '5-6 years',
-                price: '$700/month',
-                features: ['Structured Learning', 'Sports Activities', 'Language Classes', 'Field Trips'],
-                image: 'https://img.freepik.com/free-vector/kindergarten-interior-with-playing-kids_74855-5688.jpg'
+                price: '₹27,000',
+                period: 'Per Annum',
+                features: [
+                  'School Readiness',
+                  'Reading & Writing',
+                  'Basic Mathematics',
+                  'Environmental Awareness'
+                ],
+                image: 'https://img.freepik.com/free-vector/children-learning-mathematics-classroom_74855-5847.jpg'
               }
             ].map((plan) => (
               <div 
                 key={plan.plan}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-purple-100"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-purple-100"
               >
                 <div className="h-48 overflow-hidden">
                   <img 
@@ -165,11 +196,14 @@ export default function Admissions() {
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">{plan.plan}</h3>
                   <p className="text-purple-600 font-medium mb-2">{plan.age}</p>
-                  <p className="text-3xl font-bold text-gray-800 mb-4">{plan.price}</p>
+                  <div className="mb-4">
+                    <p className="text-3xl font-bold text-gray-800">{plan.price}</p>
+                    <p className="text-gray-600 text-sm">{plan.period}</p>
+                  </div>
                   <ul className="space-y-2">
                     {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-gray-600">
-                        <span className="mr-2">🌟</span>
+                      <li key={feature} className="flex items-center text-gray-600 text-sm">
+                        <span className="mr-2">✨</span>
                         {feature}
                       </li>
                     ))}
@@ -177,6 +211,25 @@ export default function Admissions() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Additional Fee Notes */}
+          <div className="mt-12 bg-purple-50 rounded-2xl p-6 shadow-md">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Important Notes:</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start space-x-2">
+                <span className="text-purple-600 mt-1">•</span>
+                <p className="text-gray-600">Fees are to be paid on an annual basis.</p>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-purple-600 mt-1">•</span>
+                <p className="text-gray-600">Additional charges may apply for optional activities and materials.</p>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-purple-600 mt-1">•</span>
+                <p className="text-gray-600">Fee structure is subject to annual revision.</p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

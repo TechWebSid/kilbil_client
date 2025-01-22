@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import constructMetadata from './components/Metadata';
 import Link from 'next/link';
+import DaycareServices from './components/DaycareServices';
 
 export const metadata = constructMetadata({
   path: '/',
@@ -317,6 +318,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Daycare Services Section */}
+      <DaycareServices />
 
       {/* FAQ Section */}
       <section className="py-20 bg-gradient-to-b from-white to-purple-50">
