@@ -40,9 +40,9 @@ const Navbar = () => {
                 <Image 
                   src="/kilbil_logo.png"
                   alt="School Logo" 
-                  width={80}
-                  height={80}
-                  className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+                  width={100}
+                  height={100}
+                  className="h-20 w-auto transition-transform duration-300 group-hover:scale-105"
                   priority
                 />
               </div>
@@ -115,9 +115,9 @@ const Navbar = () => {
             <Image 
               src="/kilbil_logo.png"
               alt="School Logo" 
-              width={50}
-              height={50}
-              className="h-12 w-auto"
+              width={100}
+              height={100}
+              className="h-16 w-auto"
             />
             <button
               onClick={() => setIsMobileMenuOpen(false)}
