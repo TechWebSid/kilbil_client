@@ -115,13 +115,13 @@ export default function DaycareServices() {
 
         {/* CTA Button */}
         <div className="text-center mt-12">
-          <a
+          <Link
             href="/contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             <span>Contact Us for Enrollment</span>
             <span className="ml-2 text-xl">👋</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

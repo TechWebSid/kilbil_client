@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope, FaCode } from 'react-icons/fa';
 
 const Footer = () => {
@@ -56,13 +57,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
+                  <Link 
                     href={link.url}
                     className="text-gray-600 hover:text-purple-600 transition-colors duration-200 flex items-center space-x-2"
                   >
                     <span className="text-purple-500">•</span>
                     <span>{link.name}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -125,4 +126,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
