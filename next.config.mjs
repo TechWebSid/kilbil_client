@@ -16,6 +16,7 @@ const nextConfig = {
       }
     ],
     minimumCacheTTL: 60,
+    unoptimized: true,
   },
   swcMinify: true,
   compiler: {
