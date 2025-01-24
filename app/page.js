@@ -19,12 +19,15 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 space-y-8">
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl font-bold text-gray-800">
-                  Welcome to 
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
-                    Kilbil Learning School
-                  </span>
-                </h1>
+              <p className="text-5xl md:text-6xl font-bold text-gray-800">
+  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
+    Welcome to
+  </span>
+</p>
+<h1 className="text-5xl md:text-6xl font-bold text-gray-800">
+  Kilbil Learning School
+</h1>
+
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Where learning meets fun and imagination takes flight! Join us in creating a bright future for your child.
                 </p>

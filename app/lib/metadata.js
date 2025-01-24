@@ -17,7 +17,7 @@ export const defaultMetadata = {
     default: "Kilbil The Learning Home - Best Kindergarten in Pune | Preschool & Daycare",
     template: "%s | Kilbil The Learning Home"
   },
-  description: "Kilbil The Learning Home, Pune's premier preschool, offers innovative early education blending play-based learning with academic excellence. We nurture creativity, confidence, and curiosity in a safe, joyful environment, preparing children for a bright future.",
+  description:"Kilbil The Learning Home, Pune's top preschool, blends play-based learning with academic excellence, nurturing creativity, confidence, and curiosity.",
   keywords: [
     "preschool in Pune",
     "best kindergarten Pune",

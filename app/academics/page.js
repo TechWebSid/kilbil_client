@@ -212,7 +212,7 @@ export default function Academics() {
               {
                 theme: 'Seasons & Weather',
                 description: 'Learning about nature cycles through art, science, and stories',
-                image: 'https://img.freepik.com/free-vector/cute-children-seasonal-activities-cartoon-set_74855-7727.jpg',
+                image: 'https://img.freepik.com/free-vector/kindergarten-school-scene-with-two-children-playing-toys-room_1308-61743.jpg?ga=GA1.1.1431111463.1730291923&semt=ais_hybrid',
                 activities: ['Weather Chart Making', 'Seasonal Crafts', 'Nature Walks'],
                 color: 'from-blue-500 to-green-500'
               },
