@@ -7,7 +7,7 @@ const Footer = () => {
     {
       name: 'Facebook',
       icon: <FaFacebook className="h-6 w-6" />,
-      url: 'https://www.facebook.com/kilbilschool'
+      url: 'https://www.facebook.com/profile.php?id=100066456170018'
     },
     {
       name: 'Twitter',
@@ -17,7 +17,7 @@ const Footer = () => {
     {
       name: 'Instagram',
       icon: <FaInstagram className="h-6 w-6" />,
-      url: 'https://www.instagram.com/kilbilschool'
+      url: 'https://www.instagram.com/kilbil_the_learning_home/'
     }
   ];
 
